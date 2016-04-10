@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+  <!-- Domain model configuration -->
+  <scanAnnotatedClasses/>
+
+  <!-- Score configuration -->
+  <scoreDirectorFactory>
+    <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
+    <!--  <easyScoreCalculatorClass>me.phil.activityplanner.domain.ScoreCalculator</easyScoreCalculatorClass> -->
+    <scoreDrl>me/phil/activityplanner/planningRules.drl</scoreDrl>
+    <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
+  </scoreDirectorFactory>
+
+  <!-- Optimization algorithms configuration -->
+  <termination>
+    <secondsSpentLimit>10</secondsSpentLimit>
+  </termination>
+    <constructionHeuristic>
+    <constructionHeuristicType>CHEAPEST_INSERTION</constructionHeuristicType>
+  </constructionHeuristic>
+  <localSearch>
+    <acceptor>
+      <lateAcceptanceSize>400</lateAcceptanceSize>
+      <entityTabuSize>7</entityTabuSize>
+    </acceptor>
+    <forager>
+      <acceptedCountLimit>50</acceptedCountLimit>
+    </forager>
+  </localSearch>
+</solver>
