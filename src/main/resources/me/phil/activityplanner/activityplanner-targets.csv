@@ -1,0 +1,41 @@
+ActivityName,TargetSessions
+S1:1. mathematical models in probability and statistics,2
+S1:2. representing data - location,2
+S1:3. representation and summary of data - measures of dispersion,3
+S1:4. representation of data,2
+S1:5. probability,9
+S1:6. correlation ,4
+S1:7. regression,4
+S1:8. DRVs,7
+S1:9. normal distribution,5
+C1:1. algebra and functions,2
+C1:2. quadratic functions,3
+C1:3. equations and inequalities ,4
+C1:4. sketching curves,6
+C1:5. coordinate geometry ,4
+C1:6. sequences and series,6
+C1:7. differentiation,5
+C1:8. integration,3
+C2:1. Algebra and functions,4
+C2:2. sine and cosine rule,2
+C2:3. exponentials and logarithms. ,6
+C2:4. coordinate geometry,6
+C2:5. binomial expansion,4
+C2:6. radian measure and application,3
+C2:7. Geometric sequences and series,6
+C2:8. graphs of trigonometric functions ,3
+C2:9. differentiation,4
+C2:10. trigonometrical identities and simple equations,3
+C2: 11. integration,5
+P:2. foundations of physics,4
+P:3. motion,6
+P:4. forces in action,9
+P:5. work energy and power,9
+P:6. materials,9
+P:7. laws of motion and momentum,9
+P:8. charge and current,9
+P:9. energy power and resistance,9
+P:10. electrical circuits,7
+P:11. waves 1,9
+P:12. waves 2,9
+P:13. quantum physics,7
