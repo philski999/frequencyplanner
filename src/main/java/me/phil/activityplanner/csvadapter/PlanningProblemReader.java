@@ -68,13 +68,13 @@ public class PlanningProblemReader {
 			records = CSVFormat.EXCEL.withHeader().withIgnoreEmptyLines().parse(availableDatesReader);
 			for (CSVRecord record : records) {
 				String dateAsString = record.get(DATE_HEADING);
-				String availableSlotsAsString = record.get(DATE_HEADING);
+				String availableSlotsAsString = record.get(SLOTS_HEADING);
 				
 				LocalDate date = null;
 				Integer availableSlots = null;
 				try {
 					date = LocalDate.parse(dateAsString);
-					availableSlots = Integer.parseInt(record.get(SLOTS_HEADING));
+					availableSlots = Integer.parseInt(availableSlotsAsString);
 					
 					// Final validation
 					if (availableSlots > 0) {
