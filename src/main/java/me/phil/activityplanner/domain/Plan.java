@@ -90,4 +90,8 @@ public class Plan implements Solution<HardSoftScore> {
 	public List<Activity> getActivities() {
 		return activity;
 	}
+
+	public static Plan emptyPlan() {
+		return new Plan();
+	}
 }
