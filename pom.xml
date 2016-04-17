@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>phil.me</groupId>
-	<artifactId>activityplanner.phil.me</artifactId>
+	<artifactId>frequencyplanner.phil.me</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Activity Planner</name>
-	<description>Assigns activities to activity slots</description>
+	<name>Frequency Planner</name>
+	<description>Assigns frequency blocks from a frequency range</description>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

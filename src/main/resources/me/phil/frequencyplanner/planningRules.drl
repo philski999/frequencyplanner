@@ -1,0 +1,29 @@
+package me.phil.activityplanner;
+    dialect "java"
+
+import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
+import me.phil.frequencyplanner.domain.FrequencyAssignment;
+import me.phil.frequencyplanner.domain.Channel;
+
+global HardSoftScoreHolder scoreHolder;
+
+// Assignments have been made
+rule "unassignedAssignments"
+	when
+		$assignment : FrequencyAssignment(channel == null)
+	then
+		scoreHolder.addHardConstraintMatch(kcontext, -1);
+end
+
+// Avoid making more assignments to a channel than it has available bandwidth
+rule "assignedBandwidth"
+	when
+		$channel : Channel($availableBandwidth : availableBandwidthInkHz)
+		$requiredBandwidth : Number(intValue > $availableBandwidth) from accumulate(
+			$frequencyAssignment : FrequencyAssignment(channel == $channel),
+			sum($frequencyAssignment.getBandwidthInkHz())
+		)
+	then
+		scoreHolder.addHardConstraintMatch(kcontext, $availableBandwidth - $requiredBandwidth.intValue());
+end
+

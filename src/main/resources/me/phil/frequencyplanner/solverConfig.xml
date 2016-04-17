@@ -6,14 +6,14 @@
   <!-- Score configuration -->
   <scoreDirectorFactory>
     <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
-    <!--  <easyScoreCalculatorClass>me.phil.activityplanner.domain.ScoreCalculator</easyScoreCalculatorClass> -->
-    <scoreDrl>me/phil/activityplanner/planningRules.drl</scoreDrl>
+    <!--  <easyScoreCalculatorClass>me.phil.frequencyplanner.domain.ScoreCalculator</easyScoreCalculatorClass> -->
+    <scoreDrl>me/phil/frequencyplanner/planningRules.drl</scoreDrl>
     <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
   </scoreDirectorFactory>
 
   <!-- Optimization algorithms configuration -->
   <termination>
-    <secondsSpentLimit>10</secondsSpentLimit>
+    <secondsSpentLimit>5</secondsSpentLimit>
   </termination>
     <constructionHeuristic>
     <constructionHeuristicType>CHEAPEST_INSERTION</constructionHeuristicType>
